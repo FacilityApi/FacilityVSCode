@@ -1,0 +1,323 @@
+{
+	"$schema":
+		"https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Facility Service Definition",
+	"patterns": [
+		{
+			"include": "#comment"
+		},
+		{
+			"include": "#attribute"
+		},
+		{
+			"include": "#service-declaration"
+		},
+		{
+			"include": "#markdown"
+		}
+	],
+	"repository": {
+		"attribute": {
+			"begin": "\\[([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+			"beginCaptures": {
+				"1": {
+					"name": "entity.name.type.attribute.fsd"
+				}
+			},
+			"end": "\\]",
+			"patterns": [
+				{
+					"match": ","
+				},
+				{
+					"include": "#strings"
+				}
+			]
+		},
+		"service-declaration": {
+			"name": "meta.service.fsd",
+			"begin": "(?=\\bservice\\b)",
+			"end": "(?<=\\})",
+			"patterns": [
+				{
+					"match": "\\b(service)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.other.service.fsd"
+						},
+						"2": {
+							"name": "entity.name.type.service.fsd"
+						}
+					}
+				},
+				{
+					"begin": "\\{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#comment"
+						},
+						{
+							"include": "#attribute"
+						},
+						{
+							"include": "#data-declaration"
+						},
+						{
+							"include": "#enum-declaration"
+						},
+						{
+							"include": "#errors-declaration"
+						},
+						{
+							"include": "#method-declaration"
+						}
+					]
+				}
+			]
+		},
+		"data-declaration": {
+			"name": "meta.data.fsd",
+			"begin": "(?=\\bdata\\b)",
+			"end": "(?<=\\})",
+			"patterns": [
+				{
+					"match": "\\b(data)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.other.data.fsd"
+						},
+						"2": {
+							"name": "entity.name.type.data.fsd"
+						}
+					}
+				},
+				{
+					"begin": "\\{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#comment"
+						},
+						{
+							"include": "#attribute"
+						},
+						{
+							"include": "#member-declaration"
+						}
+					]
+				}
+			]
+		},
+		"enum-declaration": {
+			"name": "meta.enum.fsd",
+			"begin": "(?=\\benum\\b)",
+			"end": "(?<=\\})",
+			"patterns": [
+				{
+					"match": "\\b(enum)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.other.enum.fsd"
+						},
+						"2": {
+							"name": "entity.name.type.enum.fsd"
+						}
+					}
+				},
+				{
+					"begin": "\\{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#comment"
+						},
+						{
+							"include": "#attribute"
+						}
+					]
+				}
+			]
+		},
+		"errors-declaration": {
+			"name": "meta.errors.fsd",
+			"begin": "(?=\\berrors\\b)",
+			"end": "(?<=\\})",
+			"patterns": [
+				{
+					"match": "\\b(errors)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.other.errors.fsd"
+						},
+						"2": {
+							"name": "entity.name.type.errors.fsd"
+						}
+					}
+				},
+				{
+					"begin": "\\{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"end": "\\}",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#comment"
+						},
+						{
+							"include": "#attribute"
+						}
+					]
+				}
+			]
+		},
+		"method-declaration": {
+			"name": "meta.method.fsd",
+			"begin": "(?=\\bmethod\\b)",
+			"end": "(?<=\\})",
+			"patterns": [
+				{
+					"match": "\\b(method)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.other.method.fsd"
+						},
+						"2": {
+							"name": "entity.name.function.method.fsd"
+						}
+					}
+				},
+				{
+					"begin": "\\{",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"end": "\\}(?!\\s*:)",
+					"endCaptures": {
+						"0": {
+							"name": "punctuation.definition.block.ts"
+						}
+					},
+					"patterns": [
+						{
+							"include": "#comment"
+						},
+						{
+							"include": "#attribute"
+						},
+						{
+							"include": "#member-declaration"
+						}
+					]
+				}
+			]
+		},
+		"member-declaration": {
+			"name": "meta.member.fsd",
+			"begin": "\\b([a-zA-Z_][a-zA-Z_0-9]*):",
+			"beginCaptures": {
+				"1": {
+					"1": {
+						"name": "entity.name.type.member.fsd"
+					}
+				}
+			},
+			"end": ";",
+			"patterns": [
+				{
+					"include": "#type"
+				},
+				{
+					"match": "\\b([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"name": "entity.name.type.reference.fsd"
+				}
+			]
+		},
+		"type": {
+			"name": "storage.type.builtin.fsd",
+			"match": "\\b(boolean|bytes|decimal|double|error|int32|int64|map|object|result|string)\\b",
+			"patterns": [
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.fsd",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.fsd",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.triple-slash.fsd",
+					"begin": "(?<!/)///",
+					"beginCaptures": {
+						"0": {
+							"name": "punctuation.definition.comment.cs"
+						}
+					},
+					"end": "(?=$)"
+				}
+			]
+		},
+		"markdown": {
+			"name": "meta.heading.fsd",
+			"begin": "^#\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+			"beginCaptures": {
+				"0": {
+					"name": "markup.heading.fsd"
+				}
+			},
+			"end": "(?=^#\\s+)",
+			"patterns": [
+				{
+				}
+			]
+		}
+	},
+	"scopeName": "source.fsd"
+}
