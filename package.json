@@ -15,16 +15,25 @@
         "Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "fsd",
-            "aliases": ["Facility Service Definition", "fsd"],
-            "extensions": [".fsd"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "fsd",
-            "scopeName": "source.fsd",
-            "path": "./syntaxes/fsd.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "fsd",
+                "aliases": [
+                    "Facility Service Definition",
+                    "fsd"
+                ],
+                "extensions": [
+                    ".fsd"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "fsd",
+                "scopeName": "source.fsd",
+                "path": "./syntaxes/fsd.tmLanguage.json"
+            }
+        ]
     }
 }
