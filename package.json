@@ -4,6 +4,10 @@
     "description": "Syntax highlighting for Facility Service Definition (fsd) files.",
     "version": "0.0.1",
     "publisher": "davedunkin",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ddunkin/FacilityVSCode.git"
+    },
     "engines": {
         "vscode": "^1.19.0"
     },
