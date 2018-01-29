@@ -7,7 +7,7 @@
 			"include": "#comment"
 		},
 		{
-			"include": "#attribute"
+			"include": "#attribute-section"
 		},
 		{
 			"include": "#service-declaration"
@@ -17,8 +17,8 @@
 		}
 	],
 	"repository": {
-		"attribute": {
-			"begin": "\\[([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+		"attribute-section": {
+			"begin": "\\[\\s*(?=([a-zA-Z_][a-zA-Z_0-9]*)\\b)",
 			"beginCaptures": {
 				"1": {
 					"name": "entity.name.type.attribute.fsd"
@@ -27,10 +27,50 @@
 			"end": "\\]",
 			"patterns": [
 				{
-					"match": ","
+					"include": "#attribute"
 				},
 				{
-					"include": "#strings"
+					"include": "#attribute-parameters"
+				}
+			]
+		},
+		"attribute": {
+			"match": "([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+			"name": "entity.name.type.attribute.fsd",
+			"patterns": [
+			]
+		},
+		"attribute-parameters": {
+			"begin": "(\\()",
+			"beginCaptures": {
+				"1": {
+					"name": "punctuation.parenthesis.open.fsd"
+				}
+			},
+			"end": "(\\))",
+			"endCaptures": {
+				"1": {
+					"name": "punctuation.parenthesis.close.fsd"
+				}
+			},
+			"patterns": [
+				{
+					"begin": "([a-zA-Z_][a-zA-Z_0-9]*)\\s*:",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.other.attribute.parameter-name.fsd"
+						}
+					},
+					"end": "(?=[,)])",
+					"patterns": [
+						{
+							"include": "#strings"
+						},
+						{
+							"match": "[a-zA-Z_0-9]+",
+							"name": "constant.other.attribute.parameter-value.fsd"
+						}
+					]
 				}
 			]
 		},
@@ -68,7 +108,7 @@
 							"include": "#comment"
 						},
 						{
-							"include": "#attribute"
+							"include": "#attribute-section"
 						},
 						{
 							"include": "#data-declaration"
@@ -120,7 +160,7 @@
 							"include": "#comment"
 						},
 						{
-							"include": "#attribute"
+							"include": "#attribute-section"
 						},
 						{
 							"include": "#member-declaration"
@@ -163,7 +203,7 @@
 							"include": "#comment"
 						},
 						{
-							"include": "#attribute"
+							"include": "#attribute-section"
 						}
 					]
 				}
@@ -203,7 +243,7 @@
 							"include": "#comment"
 						},
 						{
-							"include": "#attribute"
+							"include": "#attribute-section"
 						}
 					]
 				}
@@ -243,7 +283,7 @@
 							"include": "#comment"
 						},
 						{
-							"include": "#attribute"
+							"include": "#attribute-section"
 						},
 						{
 							"include": "#member-declaration"
