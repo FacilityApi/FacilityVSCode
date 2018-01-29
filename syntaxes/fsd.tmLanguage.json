@@ -293,11 +293,11 @@
 		"comment": {
 			"patterns": [
 				{
-					"name": "comment.line.triple-slash.fsd",
-					"begin": "(?<!/)///",
+					"name": "comment.line.double-slash.fsd",
+					"begin": "(?<!/)//",
 					"beginCaptures": {
 						"0": {
-							"name": "punctuation.definition.comment.cs"
+							"name": "punctuation.definition.comment.fsd"
 						}
 					},
 					"end": "(?=$)"
