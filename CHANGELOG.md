@@ -3,6 +3,9 @@ All notable changes to the "facility-vscode" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## Unreleased
+- Language server
+
 ## 0.0.2
 - Fix double-slash comments
 - Fix multiple attributes in a section

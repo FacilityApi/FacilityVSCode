@@ -1,4 +1,6 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+.prettier*
+src/
 vsc-extension-quickstart.md
