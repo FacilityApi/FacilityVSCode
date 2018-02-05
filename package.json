@@ -2,7 +2,7 @@
   "name": "facility-vscode",
   "displayName": "Facility API",
   "description": "Syntax highlighting for Facility Service Definition (fsd) files.",
-  "version": "0.0.2",
+  "version": "0.0.3-beta1",
   "publisher": "davedunkin",
   "repository": {
     "type": "git",
