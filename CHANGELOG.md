@@ -1,14 +1,25 @@
 # Change Log
+
 All notable changes to the "facility-vscode" extension will be documented in this file.
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 0.1.0
+
+* Update language server with support for
+  * Showing multiple errors
+  * Hover tips for types references
+  * Jump-to-definition of type references
+
 ## 0.0.3
-- Language server
+
+* Add language server with support for error diagnostics
 
 ## 0.0.2
-- Fix double-slash comments
-- Fix multiple attributes in a section
+
+* Fix double-slash comments
+* Fix multiple attributes in a section
 
 ## 0.0.1
-- Initial release
+
+* Initial release with syntax highlighting
