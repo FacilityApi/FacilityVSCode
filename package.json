@@ -2,7 +2,7 @@
   "name": "facility-vscode",
   "displayName": "Facility API",
   "description": "Language support for Facility Service Definition (fsd) files.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "publisher": "davedunkin",
   "license": "MIT",
   "repository": {
