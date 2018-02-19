@@ -1,13 +1,13 @@
 {
   "name": "facility-vscode",
   "displayName": "Facility API",
-  "description": "Syntax highlighting for Facility Service Definition (fsd) files.",
+  "description": "Language support for Facility Service Definition (fsd) files.",
   "version": "0.1.0",
   "publisher": "davedunkin",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ddunkin/FacilityVSCode.git"
+    "url": "https://github.com/FacilityAPI/FacilityVSCode.git"
   },
   "engines": {
     "vscode": "^1.19.0"
@@ -15,6 +15,16 @@
   "categories": [
     "Languages"
   ],
+  "keywords": [
+    "fsd",
+    "Facility API",
+    "Facility Service Definition",
+    "web services",
+    "API",
+    "OpenAPI",
+    "swagger"
+  ],
+  "icon": "assets/icon.png",
   "activationEvents": [
     "onLanguage:fsd"
   ],
