@@ -5,6 +5,7 @@ import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-lan
 
 export function activate(context: ExtensionContext) {
 	const serverDll = path.join(context.extensionPath, 'server', 'Facility.LanguageServer.dll');
+	////const serverDll = path.join(context.extensionPath, '..', 'FacilityLanguageServer', 'src', 'Facility.LanguageServer', 'bin', 'Debug', 'netcoreapp2.0', 'Facility.LanguageServer.dll');
 	const serverOptions: ServerOptions = {
 		run: { command: 'dotnet', args: [serverDll, '-lsp'] },
 		debug: { command: 'dotnet', args: [serverDll, '-lsp'] },
