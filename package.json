@@ -2,7 +2,7 @@
   "name": "facility-vscode",
   "displayName": "Facility API",
   "description": "Language support for Facility Service Definition (fsd) files.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "publisher": "davedunkin",
   "license": "MIT",
   "repository": {
@@ -10,7 +10,7 @@
     "url": "https://github.com/FacilityAPI/FacilityVSCode.git"
   },
   "engines": {
-    "vscode": "^1.19.0"
+    "vscode": "^1.75.0"
   },
   "categories": [
     "Languages"
@@ -73,16 +73,14 @@
   "scripts": {
     "vscode:prepublish": "tsc && npm run get-languageserver",
     "get-languageserver": "rm -rf server && mkdir server && curl -L -o server/FacilityLanguageServer.zip https://github.com/FacilityApi/FacilityLanguageServer/releases/download/v1.1.0/Facility.LanguageServer-1.1.0.zip && unzip -d server server/FacilityLanguageServer.zip && rm server/FacilityLanguageServer.zip",
-    "watch": "tsc -watch",
-    "update-vscode": "vscode-install",
-    "postinstall": "vscode-install"
+    "watch": "tsc -watch"
   },
   "devDependencies": {
-    "@types/node": "^7.0.18",
-    "typescript": "^2.7.1",
-    "vscode": "^1.1.10"
+    "@types/node": "^16",
+    "@types/vscode": "^1.75.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "vscode-languageclient": "^3.1.0"
+    "vscode-languageclient": "^8.1.0"
   }
 }
