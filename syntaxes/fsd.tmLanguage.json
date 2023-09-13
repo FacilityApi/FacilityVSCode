@@ -120,6 +120,9 @@
 							"include": "#errors-declaration"
 						},
 						{
+							"include": "#extern-declaration"
+						},
+						{
 							"include": "#method-declaration"
 						}
 					]
@@ -246,6 +249,30 @@
 							"include": "#attribute-section"
 						}
 					]
+				}
+			]
+		},
+		"extern-declaration": {
+			"name": "meta.extern.fsd",
+			"begin": "(?=\\bextern\\s+\\b(data|enum)\\b)",
+			"end": "(?<=;)",
+			"patterns": [
+				{
+					"match": "\\b(extern)\\s+\\b(?:(data)|(enum))\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"captures": {
+						"1": {
+							"name": "keyword.other.extern.fsd"
+						},
+						"2": {
+							"name": "keyword.other.data.fsd"
+						},
+						"3": {
+							"name": "keyword.other.enum.fsd"
+						},
+						"4": {
+							"name": "entity.name.type.data.fsd"
+						}
+					}
 				}
 			]
 		},
