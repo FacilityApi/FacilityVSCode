@@ -2,7 +2,7 @@
   "name": "facilityapi-vscode",
   "displayName": "Facility API",
   "description": "Language support for Facility Service Definition (fsd) files.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "publisher": "FacilityAPI",
   "license": "MIT",
   "repository": {
@@ -73,7 +73,7 @@
   "scripts": {
     "build": "tsc",
     "vscode:prepublish": "tsc && npm run get-languageserver",
-    "get-languageserver": "rm -rf server && mkdir server && curl -L -o server/FacilityLanguageServer.zip https://github.com/FacilityApi/FacilityLanguageServer/releases/download/v2.0.0/Facility.LanguageServer.zip && unzip -d server server/FacilityLanguageServer.zip && rm server/FacilityLanguageServer.zip",
+    "get-languageserver": "rm -rf server && mkdir server && curl -L -o server/FacilityLanguageServer.zip https://github.com/FacilityApi/FacilityLanguageServer/releases/download/v2.1.0/Facility.LanguageServer.zip && unzip -d server server/FacilityLanguageServer.zip && rm server/FacilityLanguageServer.zip",
     "watch": "tsc -watch"
   },
   "devDependencies": {
