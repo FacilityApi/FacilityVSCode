@@ -77,7 +77,7 @@
 		"service-declaration": {
 			"name": "meta.service.fsd",
 			"begin": "(?=\\bservice\\b)",
-			"end": "(?<=\\})",
+      "end": "(?<=\\})|(?=^#\\s+)",
 			"patterns": [
 				{
 					"match": "\\b(service)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
@@ -91,13 +91,13 @@
 					}
 				},
 				{
-					"begin": "\\{",
+          "begin": "(\\{)|(;)",
 					"beginCaptures": {
 						"0": {
 							"name": "punctuation.definition.block.ts"
 						}
 					},
-					"end": "\\}",
+          "end": "(\\})|(?=^#\\s+)",
 					"endCaptures": {
 						"0": {
 							"name": "punctuation.definition.block.ts"
