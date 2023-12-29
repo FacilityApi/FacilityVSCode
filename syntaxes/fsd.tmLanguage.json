@@ -278,11 +278,11 @@
 		},
 		"method-declaration": {
 			"name": "meta.method.fsd",
-			"begin": "(?=\\bmethod\\b)",
+			"begin": "(?=\\bmethod|event\\b)",
 			"end": "(?<=\\})",
 			"patterns": [
 				{
-					"match": "\\b(method)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
+					"match": "\\b(method|event)\\s+([a-zA-Z_][a-zA-Z_0-9]*)\\b",
 					"captures": {
 						"1": {
 							"name": "keyword.other.method.fsd"
