@@ -4,6 +4,10 @@ All notable changes to the "facility-vscode" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 1.2.1
+
+- Fix highlighting for services that omit curly braces around service members
+
 ## 1.2.0
 
 - Update language server with support for
