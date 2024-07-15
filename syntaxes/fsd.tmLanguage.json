@@ -278,7 +278,7 @@
 		},
 		"method-declaration": {
 			"name": "meta.method.fsd",
-			"begin": "(?=\\bmethod|event\\b)",
+			"begin": "(?=\\b(method|event)\\b)",
 			"end": "(?<=\\})",
 			"patterns": [
 				{
