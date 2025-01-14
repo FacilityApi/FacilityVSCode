@@ -8,7 +8,8 @@ This extension requires the .NET 6.0 runtime to be installed for full language s
 
 To build, run the `build` script.
 
-This extension uses https://github.com/FacilityApi/FacilityLanguageServer. It must be downloaded before running the extension. The `get-languageserver` script downloads the language server from https://github.com/FacilityApi/FacilityLanguageServer/releases/. This is done automatically as part of publishing the extension. To test a new language server, update the version there or manually copy the language server to the same location.
+This extension uses https://github.com/FacilityApi/FacilityLanguageServer. It must be downloaded before running the extension. The `get-languageserver` script downloads the language server from https://github.com/FacilityApi/FacilityLanguageServer/releases/ to the `server` directory. This is done automatically as part of publishing the extension. To test a new language server, update the version there or manually copy the language server to the same location.
 
 To test the extension, launch the `Extension` run configuration from VS Code.
 
+To package and deploy the extension, follow the [instructions](https://code.visualstudio.com/api/working-with-extensions/publishing-extension).

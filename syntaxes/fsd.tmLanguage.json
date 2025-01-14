@@ -342,7 +342,7 @@
 		},
 		"type": {
 			"name": "storage.type.builtin.fsd",
-			"match": "\\b(boolean|bytes|decimal|double|error|int32|int64|map|object|result|string)\\b",
+			"match": "\\b(boolean|bytes|decimal|float|double|error|int32|int64|map|object|result|string)\\b",
 			"patterns": [
 			]
 		},
