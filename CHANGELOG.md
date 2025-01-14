@@ -4,6 +4,10 @@ All notable changes to the "facility-vscode" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 1.3.1
+
+- Add support for float
+
 ## 1.3.0
 
 - Add support for events
