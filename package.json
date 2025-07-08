@@ -73,7 +73,7 @@
   "scripts": {
     "build": "tsc",
     "vscode:prepublish": "tsc && npm run get-languageserver",
-    "get-languageserver": "rm -rf server && mkdir server && curl -L -o server/FacilityLanguageServer.zip https://github.com/FacilityApi/FacilityLanguageServer/releases/download/v2.4.0/Facility.LanguageServer.zip && unzip -d server server/FacilityLanguageServer.zip && rm server/FacilityLanguageServer.zip",
+    "get-languageserver": "rm -rf server && mkdir server && curl -L -o server/FacilityLanguageServer.zip https://github.com/FacilityApi/FacilityLanguageServer/releases/download/v2.5.1/Facility.LanguageServer.zip && unzip -d server server/FacilityLanguageServer.zip && rm server/FacilityLanguageServer.zip",
     "watch": "tsc -watch"
   },
   "devDependencies": {
