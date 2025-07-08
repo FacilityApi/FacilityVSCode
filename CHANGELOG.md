@@ -4,6 +4,12 @@ All notable changes to the "facility-vscode" extension will be documented in thi
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## 1.4.0
+
+- Improve definition and references handlers for template types
+- Update language server with support for
+  - Rename
+
 ## 1.3.1
 
 - Add support for float
